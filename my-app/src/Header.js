@@ -1,7 +1,7 @@
 function Header (){
 return (
     <div> 
-        <h1>Our Project</h1>
+        <h1>Synodic</h1>
     </div>
 )
 }
