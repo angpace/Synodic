@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function DrinkContainer() {
+function DrinkContainer({dayTime}) {
   const [coffees, setCoffees] = useState([])
   const [cocktails, setCocktails] = useState([])
 
@@ -48,10 +48,13 @@ function DrinkContainer() {
 
   return (
     <div>
-      <h3>Suggested Coffee of the day:</h3>
-      {printCoffees}
-      <h3>Suggested Cocktail of the night:</h3>
-      {renderCocktails}
+      {dayTime ? <h3>Suggested Coffee of the day: {printCoffees}</h3>
+      
+      :
+
+      <h3>Suggested Cocktail of the night: {renderCocktails}</h3>
+
+      }
     </div>
   )
 }
