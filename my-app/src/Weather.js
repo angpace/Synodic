@@ -34,7 +34,7 @@ function Weather() {
         return (
             <>
                 <div>Loading ...</div>
-                <img src="https://media1.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" alt="loading"/>
+                <img src="https://media1.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" alt="loading" />
             </>
         )
     }
