@@ -2,10 +2,12 @@ import Weather from "./Weather";
 import ToDo from "./ToDo";
 import DrinkContainer from "./DrinkContainer";
 
-function MainContent(){
+function MainContent({dayTime}){
 return (
     <div>
-        <h3>Hello, Good Morning!</h3>
+        <h3>{dayTime ? 
+        "Hello, Good Morning!" : 
+        "Hello, Good Evening!"}</h3>
         <Weather />
         <ToDo />
         <DrinkContainer />
