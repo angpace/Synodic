@@ -10,7 +10,7 @@ return (
         "Hello, Good Evening!"}</h3>
         <Weather />
         <ToDo />
-        <DrinkContainer />
+        <DrinkContainer dayTime={dayTime}/>
     </div>
 )
 }
