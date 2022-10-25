@@ -5,107 +5,107 @@ function WeatherTable({ hourly }) {
     function renderWeather(code) {
         if (code === 0) {
             return (
-                <p>Clear Sky</p>
+                <p>Clear Sky ☀️</p>
             )
         } else if (code === 1) {
             return (
-                <p>Mainly Clear</p>
+                <p>Mainly Clear 🌤️</p>
             )
         } else if (code === 2) {
             return (
-                <p>Partly Cloudy</p>
+                <p>Partly Cloudy ⛅</p>
             )
         } else if (code === 3) {
             return (
-                <p>Overcast</p>
+                <p>Overcast ☁️</p>
             )
         } else if (code === 45) {
             return (
-                <p>Foggy</p>
+                <p>Foggy 🌫️</p>
             )
         } else if (code === 48) {
             return (
-                <p>Depositing Rime Fog</p>
+                <p>Depositing Rime Fog 🌫️🥶</p>
             )
         } else if (code === 51) {
             return (
-                <p>Light Drizzle</p>
+                <p>Light Drizzle 🌧️</p>
             )
         } else if (code === 53) {
             return (
-                <p>Moderate Drizzle</p>
+                <p>Moderate Drizzle 🌧️🌧️</p>
             )
         } else if (code === 55) {
             return (
-                <p>Dense Drizzle</p>
+                <p>Dense Drizzle 🌧️🌧️🌧️</p>
             )
         } else if (code === 56) {
             return (
-                <p>Ligth Freezing Drizzle</p>
+                <p>Ligth Freezing Drizzle 🥶🌧️</p>
             )
         } else if (code === 57) {
             return (
-                <p>Dense Freezing Drizzle</p>
+                <p>Dense Freezing Drizzle 🥶🌧️🌧️🌧️</p>
             )
         } else if (code === 61) {
             return (
-                <p>Light Rain</p>
+                <p>Light Rain ☔</p>
             )
         } else if (code === 63) {
             return (
-                <p>Moderate Rain</p>
+                <p>Moderate Rain ☔☔</p>
             )
         } else if (code === 65) {
             return (
-                <p>Heavy Rain</p>
+                <p>Heavy Rain ☔☔☔</p>
             )
         } else if (code === 66) {
             return (
-                <p>Light Freezing Rain</p>
+                <p>Light Freezing Rain 🥶☔</p>
             )
         } else if (code === 67) {
             return (
-                <p>Heavy Freezing Rain</p>
+                <p>Heavy Freezing Rain 🥶☔☔☔</p>
             )
         } else if (code === 71) {
             return (
-                <p>Light Snowfall</p>
+                <p>Light Snowfall 🌨️</p>
             )
         } else if (code === 73) {
             return (
-                <p>Moderate Snowfall</p>
+                <p>Moderate Snowfall 🌨️🌨️</p>
             )
         } else if (code === 75) {
             return (
-                <p>Heavy Snowfall</p>
+                <p>Heavy Snowfall 🌨️🌨️🌨️</p>
             )
         } else if (code === 77) {
             return (
-                <p>Flurries</p>
+                <p>Flurries ❄️</p>
             )
         } else if (code === 80) {
             return (
-                <p>Light Rain Showers</p>
+                <p>Light Rain Showers 🌦️</p>
             )
         } else if (code === 81) {
             return (
-                <p>Moderate Rain Showers</p>
+                <p>Moderate Rain Showers 🌦️🌦️</p>
             )
         } else if (code === 82) {
             return (
-                <p>Violent Rain Showers</p>
+                <p>Violent Rain Showers 🌦️🌦️🌦️</p>
             )
         } else if (code === 85) {
             return (
-                <p>Light Snow Showers</p>
+                <p>Light Snow Showers 🌨️☔</p>
             )
         } else if (code === 86) {
             return (
-                <p>Heavy Snow Showers</p>
+                <p>Heavy Snow Showers 🌨️🌨️☔☔</p>
             )
         } else if (code === 95) {
             return (
-                <p>Light/Moderate Thunderstorm</p>
+                <p>Light/Moderate Thunderstorm 🌩️🌩️</p>
             )
         }
     }
