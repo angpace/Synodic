@@ -1,5 +1,5 @@
 import Weather from "./Weather";
-import ToDo from "./ToDo";
+// import ToDo from "./ToDo";
 import DrinkContainer from "./DrinkContainer";
 
 function MainContent({dayTime}){
@@ -9,7 +9,7 @@ return (
         "Hello, Good Morning!" : 
         "Hello, Good Evening!"}</h3>
         <Weather />
-        <ToDo />
+        {/* <ToDo /> */}
         <DrinkContainer dayTime={dayTime}/>
     </div>
 )
