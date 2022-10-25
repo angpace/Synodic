@@ -1,8 +1,14 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom";
 import WeatherTable from "./WeatherTable";
 
 function Weather() {
     const [todaysWeather, setTodaysWeather] = useState({})
+    const [weatherDetails, setWeatherDetails] = useState(false)
+
+    function weatherDeatsClick(){
+        setWeatherDetails(!weatherDetails)
+    }
 
     //getting todays weather
     useEffect(() => {
@@ -17,16 +23,18 @@ function Weather() {
         const { sunrise, sunset } = todaysWeather.daily
         const { temperature_2m } = todaysWeather.hourly
         const avgTemp = (temperature_2m.reduce((a, b) => a + b, 0) / temperature_2m.length).toFixed(2)
-        //const renderedWeather = todaysWeather.hourly
-        //<WeatherTable hourly={todaysWeather.hourly} />
-        //console.log(todaysWeather)
+    
         return (
             <div className="weather_preview">
                 <div>Todays Avg Temp: {avgTemp} °F</div>
-                <div>{sunrise[0].slice(11, 16)} Sunrise</div>
-                <div>{sunset[0].slice(11, 16)} Sunset</div>
-                <div>Click Here for more details</div>
-                <WeatherTable hourly={todaysWeather.hourly} />
+                <div>{sunrise[0].slice(11, 16)} Sunrise 🌅</div>
+                <div>{sunset[0].slice(11, 16)} Sunset 🌇</div>
+                <button><Link to="/weather" onClick={weatherDeatsClick}>{weatherDetails ? "Less Details" : "More Details"}</Link></button>
+                {weatherDetails?
+                    <WeatherTable hourly={todaysWeather.hourly} />
+                    :
+                    null
+                }
             </div>
         )
     }

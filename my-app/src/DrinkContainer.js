@@ -12,13 +12,13 @@ function DrinkContainer({ dayTime }) {
   }, [])
   //Generates random coffees
   let random = (Math.floor(Math.random() * 20) + 1)
-  console.log(random)
+  //console.log(random)
 
   const printCoffees = coffees
     .map((coffee) => {
       if (coffee.id === random)
         return <div key={coffee.description}>
-          <img style={{ width: "300px" }} src={coffee.image}></img>
+          <img style={{ width: "300px" }} src={coffee.image} alt={coffee.title}></img>
           <h2>{coffee.title}</h2>
           <p>{coffee.description}</p>
         </div>

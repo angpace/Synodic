@@ -113,7 +113,7 @@ function WeatherTable({ hourly }) {
     const renderTable = time.map((hour, index) => {
         return (
             <tr key={hour}>
-                <td> {hour.slice(11, 16)} </td>
+                <td>{hour.slice(11, 16)}</td>
                 <td>{renderWeather(weathercode[index])}</td>
                 <td>{parseInt(temperature_2m[index])} °F</td>
                 <td>{windspeed_10m[index].toFixed(1)} mp/h</td>
