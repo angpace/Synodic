@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function DrinkContainer({dayTime}) {
+function DrinkContainer({ dayTime }) {
   const [coffees, setCoffees] = useState([])
   const [cocktails, setCocktails] = useState([])
 
@@ -12,13 +12,13 @@ function DrinkContainer({dayTime}) {
   }, [])
   //Generates random coffees
   let random = (Math.floor(Math.random() * 20) + 1)
-  console.log(random)
+  //console.log(random)
 
   const printCoffees = coffees
     .map((coffee) => {
       if (coffee.id === random)
         return <div key={coffee.description}>
-          <img style={{ width: "300px" }} src={coffee.image}></img>
+          <img style={{ width: "300px" }} src={coffee.image} alt={coffee.title}></img>
           <h2>{coffee.title}</h2>
           <p>{coffee.description}</p>
         </div>
@@ -53,19 +53,19 @@ function randomCocktail(){
 
   return (
     <div>
-      {dayTime ? 
-      
-      <div>
-      <h3>Suggested Coffee of the day:</h3>
-      <p>{printCoffees}</p>
-      </div>
-      :
-      <div>
-      <h3>Suggested Cocktail of the night:</h3>
-      <p>{renderCocktails}</p>
-      </div>
+      {dayTime ?
 
-    
+        <div>
+          <h3>Suggested Coffee of the day:</h3>
+          <p>{printCoffees}</p>
+        </div>
+        :
+        <div>
+          <h3>Suggested Cocktail of the night:</h3>
+          <p>{renderCocktails}</p>
+        </div>
+
+
 
       }
     </div>
