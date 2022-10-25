@@ -46,12 +46,12 @@ function App() {
             <Weather />
           </Route>
           <Route path="/">
-            <MainContent />
+            <MainContent dayTime={dayTime}/>
           </Route>
         </Switch>
       </div>
     </Router>
-      <MainContent dayTime={dayTime}/>
+      {/* <MainContent dayTime={dayTime}/> */}
     </div>
   );
 }
