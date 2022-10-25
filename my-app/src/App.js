@@ -5,10 +5,11 @@ import MainContent from './MainContent';
 
 function App() {
   const [dayTime, setDayTime] = useState(true)
-
+  const appClass = dayTime ? "App light" : "App dark"
   return (
-    <div >
-      < Header dayTime={dayTime} setDayTime={setDayTime} />
+
+    <div className={appClass}>
+      < Header dayTime={dayTime} setDayTime={setDayTime}/>
       <MainContent dayTime={dayTime}/>
     </div>
   );
