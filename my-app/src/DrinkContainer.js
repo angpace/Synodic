@@ -19,7 +19,7 @@ function DrinkContainer({dayTime}) {
       if (coffee.id === random)
         return <div key={coffee.description}>
           <img style={{ width: "300px" }} src={coffee.image}></img>
-          <p>{coffee.title}</p>
+          <h2>{coffee.title}</h2>
           <p>{coffee.description}</p>
         </div>
     })
@@ -34,12 +34,12 @@ function DrinkContainer({dayTime}) {
   const renderCocktails = cocktails.map(cocktail => {
     return (
       <div key={cocktail.idDrink}>
-        <h2>{cocktail.strDrink}</h2>
         <img
           src={cocktail.strDrinkThumb} alt={cocktail.strDrink}
           style={{ width: "300px" }}
         />
-        <p>{cocktail.strInstructions}</p>
+        <h2>{cocktail.strDrink}</h2>
+        <p>A cocktail made of {cocktail.strIngredient1} with {cocktail.strIngredient2}.</p>
       </div>
     )
   })
@@ -48,11 +48,19 @@ function DrinkContainer({dayTime}) {
 
   return (
     <div>
-      {dayTime ? <h3>Suggested Coffee of the day: {printCoffees}</h3>
+      {dayTime ? 
       
+      <div>
+      <h3>Suggested Coffee of the day:</h3>
+      <p>{printCoffees}</p>
+      </div>
       :
+      <div>
+      <h3>Suggested Cocktail of the night:</h3>
+      <p>{renderCocktails}</p>
+      </div>
 
-      <h3>Suggested Cocktail of the night: {renderCocktails}</h3>
+    
 
       }
     </div>
