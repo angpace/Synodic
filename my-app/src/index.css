@@ -14,3 +14,12 @@ code {
 .header {
   font-family: cursive,
 }
+
+.App.dark {
+  background-color: #333;
+  color: #fff;
+}
+.App.light {
+  background-color: #fff;
+  color: #333;
+}
