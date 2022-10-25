@@ -13,17 +13,23 @@ function Weather() {
     if (Object.keys(todaysWeather).length > 0) {
         const { sunrise, sunset } = todaysWeather.daily
         const { temperature_2m, weathercode } = todaysWeather.hourly
-        console.log(todaysWeather)
+        const avgTemp = (temperature_2m.reduce((a, b) => a + b, 0) / temperature_2m.length).toFixed(2)
         return (
-            <>
-                <div>Click Here for todays Weather</div>
-                <div>{sunrise}</div>
-                <div>{sunset}</div>
-            </>
+            <div className="weather_preview">
+                <div>Todays Avg Temp: {avgTemp} °F</div>
+                <div>{sunrise[0].slice(11, 16)} Sunrise</div>
+                <div>{sunset[0].slice(11, 16)} Sunset</div>
+                <div>Click Here for more details</div>
+            </div>
         )
     }
     else {
-        return <div>Loading ...</div>
+        return (
+            <>
+                <div>Loading ...</div>
+                <img src="https://media1.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" alt="loading"/>
+            </>
+        )
     }
 }
 
