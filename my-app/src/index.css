@@ -11,21 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-  .header {
-    padding: 10px;
-    font-size: 50px;
-    text-align: left;
-  }
 
-  .toggle {
-    font-size: 50px;
-    float: right;
-  }
+.header {
+  padding: 10px;
+  font-size: 50px;
+  text-align: left;
+}
+
+.toggle {
+  font-size: 50px;
+  float: right;
+}
 
 .App.dark {
   background-color: #333;
   color: #fff;
 }
+
 .App.light {
   background-color: #fff;
   color: #333;
