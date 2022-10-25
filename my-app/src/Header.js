@@ -1,19 +1,24 @@
-function Header ({dayTime, setDayTime}){
+function Header({ dayTime, setDayTime }) {
 
-function handleToggle(){
-    setDayTime(dayTime => !dayTime)
-}
-return (
-    <div> 
-        <h1>Synodic
-        {dayTime ? 
-        <button onClick={handleToggle}>🌞</button>:
-        
-        <button onClick={handleToggle}>🌙</button>}
-        </h1>
+    function handleToggle() {
+        setDayTime(dayTime => !dayTime)
+    }
 
-    </div>
-)
+    // function handleTheme(){
+    //     setDayTheme(dayTheme => !dayTheme)
+    // }
+    const appClass = dayTime ? "App light" : "App dark"
+    return (
+        <div>
+            <h1>Synodic
+                {dayTime ?
+                    <button className={appClass} onClick={handleToggle} >🌞</button> :
+
+                    <button className={appClass} onClick={handleToggle}>🌙</button>}
+            </h1>
+
+        </div>
+    )
 }
 
 export default Header;
