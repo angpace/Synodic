@@ -1,4 +1,10 @@
 import { useEffect, useState } from "react";
+import styled from "styled-components";
+
+const Smallp = styled.p`
+/* position: inherit; */
+width: 23%;
+`
 
 function DrinkContainer({ dayTime }) {
   const [coffees, setCoffees] = useState([])
@@ -20,7 +26,7 @@ function DrinkContainer({ dayTime }) {
         return <div key={coffee.id}>
           <img style={{ width: "300px" }} src={coffee.image} alt={coffee.title}></img>
           <h2>{coffee.title}</h2>
-          <p>{coffee.description}</p>
+          <Smallp>{coffee.description}</Smallp>
         </div>
     })
 
@@ -44,7 +50,7 @@ function randomCocktail(){
           style={{ width: "300px" }}
         />
         <h2>{cocktail.strDrink}</h2>
-        <p>A cocktail made of {cocktail.strIngredient1} with {cocktail.strIngredient2}.</p>
+        <Smallp>A cocktail made of {cocktail.strIngredient1} with {cocktail.strIngredient2}.</Smallp>
       </div>
     )
   })
@@ -52,23 +58,23 @@ function randomCocktail(){
   // console.log(randomCoffees)
 
   return (
-    <div>
+    <span>
       {dayTime ?
 
-        <div className="drinkbox">
+        <span>
           <h3>Suggested Coffee of the day:</h3>
-          <div>{printCoffees}</div>
-        </div>
+          <span>{printCoffees}</span>
+        </span>
         :
-        <div className="drink">
+        <span>
           <h3>Suggested Cocktail of the night:</h3>
-          <div>{renderCocktails}</div>
-        </div>
+          <span>{renderCocktails}</span>
+        </span>
 
 
 
       }
-    </div>
+    </span>
   )
 }
 

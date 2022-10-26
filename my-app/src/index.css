@@ -25,28 +25,19 @@ body {
 }
 
 .App.dark {
-  background-color: rgb(48, 48, 122);
+  background-image: linear-gradient(to top, #FD8046, #191044);
   color: #999;
   height: 100%;
-  transition: background-color 0.25s ease-in-out;
-  background: url(https://t3.ftcdn.net/jpg/00/76/37/40/240_F_76374063_IFPNeAjCKygw1rS4Xd0jqApo7VGQNxiV.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  transition: background-image 0.25s ease-in-out;
 }
 
 .App.light {
 
-  background-color: rgb(242, 142, 226);
+  /* background-color: rgb(242, 142, 226); */
+  background-image: linear-gradient(to top, #f5c1e2,#ecbc8cad, #9ab6ee);
   color: #333;
   height: 100%;
-  transition: background-color 0.25s ease-in-out;
-  background: url(https://t4.ftcdn.net/jpg/02/98/07/45/240_F_298074532_2fWgogwkAlLlvn6K5OA9Uj5smFGWGuO8.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  transition: background-image 0.25s ease-in-out;
 
 
 }
@@ -95,4 +86,31 @@ th {
 }
 tr:hover {
    background: #f4f4f4;
+ }
+
+ .parentBox {
+  /* display: flex;
+  margin: 10px;
+  padding: 25px;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap; */
+  /* align-items: last baseline */
+  display: block;
+
+ }
+ .drinkBox {
+  padding: 5px;
+  display: block;
+ }
+ .taskBox {
+ padding: 5px;
+ justify-content: left;
+ position: relative;
+ display: block;
+ }
+ .weatherBox {
+  padding: 5px;
+  position: relative;
+  display: block;
  }
