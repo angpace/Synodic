@@ -55,12 +55,12 @@ function randomCocktail(){
     <div>
       {dayTime ?
 
-        <div className="drinkbox">
+        <div>
           <h3>Suggested Coffee of the day:</h3>
           <div>{printCoffees}</div>
         </div>
         :
-        <div className="drink">
+        <div>
           <h3>Suggested Cocktail of the night:</h3>
           <div>{renderCocktails}</div>
         </div>

@@ -32,10 +32,13 @@ body {
 }
 
 .App.light {
+
   background-color: rgb(242, 142, 226);
   color: #333;
   height: 100%;
   transition: background-color 0.25s ease-in-out;
+
+
 }
 
 .grid-container {
@@ -47,4 +50,11 @@ body {
 
 .list {
   list-style-type: none;
+}
+
+.flex-container {
+  display: flex;
+
+  flex-flow: row-wrap;
+  justify-content: space-around;
 }
