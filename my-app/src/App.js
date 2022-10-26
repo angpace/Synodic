@@ -23,7 +23,7 @@ function App() {
       <Router>
         <div>
           <nav>
-            <ul>
+            <ul className='list'>
               <li>
                 <Link to="/">Home</Link>
               </li>

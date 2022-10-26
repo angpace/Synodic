@@ -65,7 +65,7 @@ function ToDo() {
 
     return (
         <div>
-            <ul>To Do:
+            <ul className="list">To Do:
                 {toDoList}
             </ul>
             <form onSubmit={handleSubmit}>
