@@ -21,20 +21,10 @@ function App() {
   
     <div className={appClass}>
       <Router>
-      < Header dayTime={dayTime} setDayTime={setDayTime} />
+      <Header dayTime={dayTime} setDayTime={setDayTime} />
         <div>
           <nav>
-            <ul className='list'>
-              {/* <li>
-                <Link to="/">Home</Link>
-              </li> */}
-              <li>
-                <Link to="/todo">ToDo</Link>
-              </li>
-              {/* <li>
-                <Link to="/weather">Weather</Link>
-              </li> */}
-            </ul>
+            
           </nav>
 
           {/* A <Switch> looks through its children <Route>s and
