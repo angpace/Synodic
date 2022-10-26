@@ -1,17 +1,8 @@
 import styled from "styled-components"
-import { Link } from "react-router-dom";
-
-const Head = styled.h1`
+const Title = styled.h1`
 font-size: 4em;
 text-align: left;
 color: palevioletred
-`
-
-const StyledLink = styled(Link)`
-color: palevioletred;
-/* :hover {
-transform: scale(1.5);
-} */
 `
 
 const Button = styled.button`
@@ -29,13 +20,9 @@ margin-top: 2px;
 /* transform: scale(1.5); */
 }
 `
-/* const StyledLink = styled(Link)`
-  color: Blue;
-  text-decoration: none;
-  margin: 1rem;
-  position: relative;
-`; */
+
 function Header({ dayTime, setDayTime }) {
+
 
 
     function handleToggle() {
@@ -44,11 +31,11 @@ function Header({ dayTime, setDayTime }) {
     return (
 
             <div>
-                <Head><StyledLink to="/" style={{ textDecoration: 'none' }}>Synodic</StyledLink>
+                <Title> Synodic
                     {dayTime ?
                         <Button className="toggle" onClick={handleToggle}>🌙</Button>:
                     <Button className="toggle" onClick={handleToggle}>🌞</Button>}
-                </Head>
+                </Title>
             </div>
 
     

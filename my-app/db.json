@@ -1,18 +1,6 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "description": "Make Coffee"
-    },
-    {
-      "id": 2,
-      "description": "Water Plants"
-    },
-    {
-      "id": 3,
-      "description": "Brush Teeth"
-    },
-    {
       "id": 4,
       "description": "Sign Up For Health Insurance"
     },
@@ -23,6 +11,10 @@
     {
       "id": 6,
       "description": "Counter-sue landlord"
+    },
+    {
+      "description": "smoothie",
+      "id": 7
     }
   ]
 }

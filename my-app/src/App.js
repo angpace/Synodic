@@ -18,21 +18,22 @@ function App() {
   return (
 
 
+  
     <div className={appClass}>
-      < Header dayTime={dayTime} setDayTime={setDayTime} />
       <Router>
+      < Header dayTime={dayTime} setDayTime={setDayTime} />
         <div>
           <nav>
             <ul className='list'>
-              <li>
+              {/* <li>
                 <Link to="/">Home</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/todo">ToDo</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/weather">Weather</Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
 
