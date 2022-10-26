@@ -4,16 +4,16 @@ function Header({ dayTime, setDayTime }) {
         setDayTime(dayTime => !dayTime)
     }
     return (
-        <>
-            <div>
-                <h1 className="header">Synodic
-                    {dayTime ?
-                        <button className="toggle" onClick={handleToggle}>🌞</button> :
 
-                        <button className="toggle" onClick={handleToggle}>🌙</button>}</h1>
+            <div>
+                <h1 className="header"> Synodic
+                    {dayTime ?
+                        <button className="toggle" onClick={handleToggle}>🌙</button>:
+                    <button className="toggle" onClick={handleToggle}>🌞</button>}
+                </h1>
             </div>
 
-        </>
+    
     )
 }
 

@@ -17,7 +17,7 @@ function DrinkContainer({ dayTime }) {
   const printCoffees = coffees
     .map((coffee) => {
       if (coffee.id === random)
-        return <div key={coffee.description}>
+        return <div key={coffee.id}>
           <img style={{ width: "300px" }} src={coffee.image} alt={coffee.title}></img>
           <h2>{coffee.title}</h2>
           <p>{coffee.description}</p>
