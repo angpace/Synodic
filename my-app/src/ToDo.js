@@ -1,5 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Task from "./Task";
+import styled from "styled-components";
+
+const Button = styled.button `
+border-radius:20px;
+border: none;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+font-size: 12px;
+font-weight: 700;
+padding: 7px 10px;
+color: white;
+background-color: cornflowerblue
+`
 
 function ToDo() {
     const [toDo, setToDo] = useState([])
@@ -73,8 +85,9 @@ function ToDo() {
                 onChange={handleChange} 
                 value={form.description}
                 />
-                <button type="submit">Add Task</button>
+                <Button type="submit">Add Task</Button>
             </form>
+            
             <ul className="list">To-do List
                 {toDoList}
             </ul>

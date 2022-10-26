@@ -1,5 +1,15 @@
 import { useState } from "react"
+import styled from "styled-components"
 
+const DeleteButton = styled.button`
+border-radius:20px;
+border: none;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+font-size: 12px;
+font-weight: 700;
+padding: 7px 10px;
+color: white;
+background-color: white;`
 
 
 function Task({ task, handleEditSubmit, handleDeleteClick }) {
@@ -7,7 +17,7 @@ function Task({ task, handleEditSubmit, handleDeleteClick }) {
     const [editClick, setEditClick] = useState(false)
     const [desEdit, setDesEdit] = useState(description)
 
-    
+
 
     function onEditClick() {
         setEditClick(!editClick)
@@ -40,25 +50,26 @@ function Task({ task, handleEditSubmit, handleDeleteClick }) {
             .then(res => res.json())
             .then(() => handleDeleteClick(task))
     }
-
+    
     return (
-        <li style={{color: "white"}}>
+        <li>
+            
             {editClick ?
                 <>
                     <form onSubmit={onEditSubmit}>
-                        <input type="text" onChange={onEditChange} value={desEdit}/>
-                        <button>Edit✏️</button>
+                        <input type="text" onChange={onEditChange} value={desEdit} />
+                        <button className="textButton">Edit✏️</button>
                     </form>
                 </>
                 :
                 <>
-                    {description}
+                    {description}  
                     <button className="editBtn" onClick={onEditClick}>Edit✏️</button>
                 </>
             }
-            <button onClick={onDeleteClick}>🗑️</button>
+            <DeleteButton onClick={onDeleteClick}>🗑️</DeleteButton>
         </li>
     )
 }
 
-export default Task
+export default Task;
