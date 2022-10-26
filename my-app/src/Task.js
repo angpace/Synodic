@@ -54,18 +54,18 @@ const Button = styled.button`
   }
   `
     return (
-        <li>
+        <li style={{color: "white"}}>
             {editClick ?
                 <>
                     <form onSubmit={onEditSubmit}>
-                        <input type="text" onChange={onEditChange} value={desEdit} />
-                        <button>Submit</button>
+                        <input type="text" onChange={onEditChange} value={desEdit}/>
+                        <button>Edit✏️</button>
                     </form>
                 </>
                 :
                 <>
                     {description}
-                    <button className="editBtn" onClick={onEditClick}>✏️</button>
+                    <button className="editBtn" onClick={onEditClick}>Edit✏️</button>
                 </>
             }
             <button onClick={onDeleteClick}>🗑️</button>

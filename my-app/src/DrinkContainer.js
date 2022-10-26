@@ -24,11 +24,16 @@ function DrinkContainer({ dayTime }) {
         </div>
     })
 
-
-  useEffect(() => {
+function randomCocktail(){
     fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
       .then(res => res.json())
       .then(data => setCocktails(data.drinks))
+}
+  useEffect(() => {
+    randomCocktail();
+    // fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+    //   .then(res => res.json())
+    //   .then(data => setCocktails(data.drinks))
   }, [])
 
   const renderCocktails = cocktails.map(cocktail => {
@@ -52,12 +57,12 @@ function DrinkContainer({ dayTime }) {
 
         <div>
           <h3>Suggested Coffee of the day:</h3>
-          <p>{printCoffees}</p>
+          <div>{printCoffees}</div>
         </div>
         :
         <div>
           <h3>Suggested Cocktail of the night:</h3>
-          <p>{renderCocktails}</p>
+          <div>{renderCocktails}</div>
         </div>
 
 

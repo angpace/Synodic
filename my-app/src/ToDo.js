@@ -64,10 +64,7 @@ function ToDo() {
     })
 
     return (
-        <div>
-            <ul className="list">To Do:
-                {toDoList}
-            </ul>
+        <div style={{color: "white"}}>
             <form onSubmit={handleSubmit}>
                 <input 
                 type="text" 
@@ -76,8 +73,11 @@ function ToDo() {
                 onChange={handleChange} 
                 value={form.description}
                 />
-                <button type="submit">Submit</button>
+                <button type="submit">Add Task</button>
             </form>
+            <ul className="list">To-do List
+                {toDoList}
+            </ul>
         </div>
     )
 }
