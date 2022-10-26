@@ -57,12 +57,12 @@ function randomCocktail(){
 
         <div>
           <h3>Suggested Coffee of the day:</h3>
-          <p>{printCoffees}</p>
+          <div>{printCoffees}</div>
         </div>
         :
         <div>
           <h3>Suggested Cocktail of the night:</h3>
-          <p>{renderCocktails}</p>
+          <div>{renderCocktails}</div>
         </div>
 
 
