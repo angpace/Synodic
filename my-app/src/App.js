@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import ToDo from './ToDo';
 import Weather from './Weather';
+import {createGlobalStyle, ThemeProvider} from 'styled-components'
 
 function App() {
 
