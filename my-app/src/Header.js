@@ -1,4 +1,28 @@
+import styled from "styled-components"
+
 function Header({ dayTime, setDayTime }) {
+
+    const Title = styled.h1`
+    font-size: 4em;
+    text-align: left;
+    color: palevioletred
+    `
+
+    const Button = styled.button`
+    display: inline-block;
+  color: palevioletred;
+  font-size: .45em;
+  margin: .25em;
+  padding: 0.25em;
+  border: 0px solid palevioletred;
+  border-radius: .5px;
+  display: block;
+  background-color: transparent;
+  :hover{
+    margin-top: 2px;
+    /* transform: scale(1.5); */
+  }
+    `
 
     function handleToggle() {
         setDayTime(dayTime => !dayTime)
@@ -6,11 +30,11 @@ function Header({ dayTime, setDayTime }) {
     return (
 
             <div>
-                <h1 className="header"> Synodic
+                <Title> Synodic
                     {dayTime ?
-                        <button className="toggle" onClick={handleToggle}>🌙</button>:
-                    <button className="toggle" onClick={handleToggle}>🌞</button>}
-                </h1>
+                        <Button className="toggle" onClick={handleToggle}>🌙</Button>:
+                    <Button className="toggle" onClick={handleToggle}>🌞</Button>}
+                </Title>
             </div>
 
     

@@ -1,9 +1,12 @@
 import { useState } from "react"
+import styled from "styled-components"
 
 function Task({ task, handleEditSubmit, handleDeleteClick }) {
     const { description, id } = task
     const [editClick, setEditClick] = useState(false)
     const [desEdit, setDesEdit] = useState(description)
+
+    
 
     function onEditClick() {
         setEditClick(!editClick)
@@ -36,7 +39,20 @@ function Task({ task, handleEditSubmit, handleDeleteClick }) {
             .then(res => res.json())
             .then(() => handleDeleteClick(task))
     }
-
+const Button = styled.button`
+    display: inline-block;
+  color: palevioletred;
+  font-size: .45em;
+  margin: .25em;
+  padding: 0.25em;
+  border: 0px solid palevioletred;
+  border-radius: .5px;
+  display: block;
+  background-color: transparent;
+  :hover {
+    margin-top: 5px;
+  }
+  `
     return (
         <li>
             {editClick ?
