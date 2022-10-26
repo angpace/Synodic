@@ -1,18 +1,58 @@
 import { useState } from "react"
 
-function Task({task}){
-    const {description, id} = task
+function Task({ task, handleEditSubmit, handleDeleteClick }) {
+    const { description, id } = task
     const [editClick, setEditClick] = useState(false)
+    const [desEdit, setDesEdit] = useState(description)
 
-    function onEditClick(){
+    function onEditClick() {
         setEditClick(!editClick)
-        console.log(id)
     }
-    
-    return(
+
+    function onEditChange(e) {
+        setDesEdit(e.target.value)
+    }
+
+    function onEditSubmit(e) {
+        e.preventDefault()
+        fetch(`http://localhost:3000/tasks/${id}`, {
+            method: "PATCH",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                description: desEdit
+            })
+        })
+            .then(res => res.json())
+            .then(data => handleEditSubmit(data))
+        setEditClick(!editClick)
+    }
+
+    function onDeleteClick() {
+        fetch(`http://localhost:3000/tasks/${id}`, {
+            method: "DELETE"
+        })
+            .then(res => res.json())
+            .then(() => handleDeleteClick(task))
+    }
+
+    return (
         <li>
-            {description}
-            <button className="editBtn" onClick={onEditClick}>✏️</button>
+            {editClick ?
+                <>
+                    <form onSubmit={onEditSubmit}>
+                        <input type="text" onChange={onEditChange} value={desEdit} />
+                        <button>Submit</button>
+                    </form>
+                </>
+                :
+                <>
+                    {description}
+                    <button className="editBtn" onClick={onEditClick}>✏️</button>
+                </>
+            }
+            <button onClick={onDeleteClick}>🗑️</button>
         </li>
     )
 }
