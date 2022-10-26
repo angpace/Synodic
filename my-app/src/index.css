@@ -1,3 +1,18 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+#root {
+  height: 100%;
+}
+
+html,
+body {
+  min-height: 100vh;
+  height: 100%;
+}
+
 .header {
   padding: 10px;
   font-size: 50px;
@@ -10,25 +25,20 @@
 }
 
 .App.dark {
-  background-color: #333;
-  color: #fff;
-  background: url(https://wallpapercave.com/wp/wp3258574.png) no-repeat center center fixed;
-    background-attachment:scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  background-color: rgb(48, 48, 122);
+  color: #999;
+  height: 100%;
+  transition: background-color 0.25s ease-in-out;
 }
 
 .App.light {
-  background-color: #fff;
-  color: rgb(11, 11, 11);
-  background: url(https://images.pexels.com/photos/38326/pexels-photo-38326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) no-repeat center center fixed;
-    background-attachment: scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
+  background-color: rgb(242, 142, 226);
+  color: #333;
+  height: 100%;
+  transition: background-color 0.25s ease-in-out;
+
+
 }
 
 .grid-container {

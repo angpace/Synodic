@@ -10,7 +10,6 @@ import {
 } from "react-router-dom";
 import ToDo from './ToDo';
 import Weather from './Weather';
-import {createGlobalStyle, ThemeProvider} from 'styled-components'
 
 function App() {
 
@@ -19,6 +18,7 @@ function App() {
   return (
 
 
+  
     <div className={appClass}>
       <Router>
       < Header dayTime={dayTime} setDayTime={setDayTime} />
