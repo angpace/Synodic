@@ -29,6 +29,11 @@ body {
   color: #999;
   height: 100%;
   transition: background-color 0.25s ease-in-out;
+  background: url(https://t3.ftcdn.net/jpg/00/76/37/40/240_F_76374063_IFPNeAjCKygw1rS4Xd0jqApo7VGQNxiV.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .App.light {
@@ -37,6 +42,11 @@ body {
   color: #333;
   height: 100%;
   transition: background-color 0.25s ease-in-out;
+  background: url(https://t4.ftcdn.net/jpg/02/98/07/45/240_F_298074532_2fWgogwkAlLlvn6K5OA9Uj5smFGWGuO8.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
 
 }
