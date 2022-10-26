@@ -22,7 +22,7 @@
 
 .App.light {
   background-color: #fff;
-  color: #333;
+  color: rgb(11, 11, 11);
   background: url(https://images.pexels.com/photos/38326/pexels-photo-38326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) no-repeat center center fixed;
     background-attachment: scroll;
     -webkit-background-size: cover;
@@ -40,4 +40,11 @@
 
 .list {
   list-style-type: none;
+}
+
+.flex-container {
+  display: flex;
+
+  flex-flow: row-wrap;
+  justify-content: space-around;
 }
