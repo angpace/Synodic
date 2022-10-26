@@ -128,7 +128,7 @@ function WeatherTable({ hourly }) {
                 <tr>
                     <th>Time</th>
                     <th>Weather</th>
-                    <th>Temprature</th>
+                    <th>Temperature</th>
                     <th>Wind Speed</th>
                     <th>Precipitation</th>
                 </tr>
