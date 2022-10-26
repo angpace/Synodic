@@ -3,12 +3,12 @@ import Weather from "./Weather";
 import DrinkContainer from "./DrinkContainer";
 import styled from "styled-components";
 
-
+const Box = styled.span`
+background-color: white;
+`
 function MainContent({ dayTime }) {
 
-    const Box = styled.span`
-    background-color: white;
-    `
+   
 
     return (
         <Box>

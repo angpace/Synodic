@@ -31,9 +31,9 @@ function App() {
               <li>
                 <Link to="/todo">ToDo</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/weather">Weather</Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
 
