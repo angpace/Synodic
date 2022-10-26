@@ -4,7 +4,12 @@ function Task({ task, handleEditSubmit, handleDeleteClick }) {
     const { description, id } = task
     const [editClick, setEditClick] = useState(false)
     const [desEdit, setDesEdit] = useState(description)
-
+    const [isChecked, setIsChecnked] = useState(false)
+ 
+    function onCheckChange(){
+        setIsChecnked(!isChecked)
+    }
+    
     function onEditClick() {
         setEditClick(!editClick)
     }
@@ -39,6 +44,7 @@ function Task({ task, handleEditSubmit, handleDeleteClick }) {
 
     return (
         <li>
+            <input type="checkbox" onChange={onCheckChange}/>
             {editClick ?
                 <>
                     <form onSubmit={onEditSubmit}>
@@ -48,7 +54,7 @@ function Task({ task, handleEditSubmit, handleDeleteClick }) {
                 </>
                 :
                 <>
-                    {description}
+                    {isChecked? <small><i>{description}</i></small> : description}
                     <button className="editBtn" onClick={onEditClick}>✏️</button>
                 </>
             }
