@@ -3,8 +3,11 @@ import Task from "./Task";
 
 function ToDo() {
     const [toDo, setToDo] = useState([])
-    const [form, setForm] = useState({})
+    const [form, setForm] = useState({
+        description: ""
+    })
     const todoURL = "http://localhost:3000/tasks"
+    
     useEffect(() => {
         fetch(todoURL)
             .then(res => res.json())
@@ -32,10 +35,32 @@ function ToDo() {
         })
             .then(res => res.json())
             .then(data => setToDo([...toDo, data]))
+        setForm({
+            description: ""
+        })
+    }
+
+    function handleEditSubmit(editedTask) {
+        const updatedList = toDo.map((task) => {
+            if (editedTask.id === task.id) {
+                return editedTask
+            }
+            else {
+                return task
+            }
+        })
+        setToDo(updatedList)
+    }
+
+    function handleDeleteClick(deletedTask) {
+        const updatedList = toDo.filter((task) => {
+            return task.id !== deletedTask.id
+        })
+        setToDo(updatedList)
     }
 
     const toDoList = toDo.map(task => {
-        return <Task key={task.id} task={task}/>
+        return <Task key={task.id} task={task} handleEditSubmit={handleEditSubmit} handleDeleteClick={handleDeleteClick} />
     })
 
     return (
@@ -44,7 +69,13 @@ function ToDo() {
                 {toDoList}
             </ul>
             <form onSubmit={handleSubmit}>
-                <input type="text" name="description" placeholder="Add New To Do!" onChange={handleChange}></input>
+                <input 
+                type="text" 
+                name="description" 
+                placeholder="Add New To Do!" 
+                onChange={handleChange} 
+                value={form.description}
+                />
                 <button type="submit">Submit</button>
             </form>
         </div>
