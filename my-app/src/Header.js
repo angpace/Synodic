@@ -24,13 +24,12 @@ const Button = styled.button`
 display: inline-block;
 color: palevioletred;
 font-size: .6em;
-margin: .25em;
+margin: .35em;
 padding: 0.25em;
 border: 0px solid palevioletred;
 border-radius: .5px;
 display: block;
 background-color: transparent;
-
 :hover{
 margin-top: 2px;
 

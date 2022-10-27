@@ -64,7 +64,19 @@ body {
 
 .list {
   list-style-type: none;
+  font-weight: bold;
 }
+ul li {
+  font-weight: normal;
+}
+
+.title {
+  font-weight: bold;
+}
+.title > p {
+  font-weight: normal;
+}
+
 
 .flex-container {
   display: flex;
