@@ -12,8 +12,12 @@ font-weight: 500;
 padding: 7px 10px;
 background-color: cornflowerblue;
 `
+const StyledLink = styled(Link)`
+color: white;
+text-decoration: none;
+`
 
-function Weather() {
+function Weather({}) {
     const [todaysWeather, setTodaysWeather] = useState({})
     const [weatherDetails, setWeatherDetails] = useState(false)
 
@@ -40,7 +44,7 @@ function Weather() {
                 <div>Todays Avg Temp: {avgTemp} °F</div>
                 <div>{sunrise[0].slice(11, 16)} Sunrise 🌅</div>
                 <div>{sunset[0].slice(11, 16)} Sunset 🌇</div>
-                <Button><Link style={{color: "white"}}to="/weather" onClick={weatherDeatsClick}>{weatherDetails ? "Less Details" : "More Details"}</Link></Button>
+                <Button><StyledLink to="/weather" onClick={weatherDeatsClick}>{weatherDetails ? "Less Details" : "More Details"}</StyledLink></Button>
                 {weatherDetails?
                     <WeatherTable hourly={todaysWeather.hourly} />
                     :

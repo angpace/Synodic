@@ -85,7 +85,7 @@ function MainContent({ dayTime }) {
                 "Good Morning!" :
 
                 "Good Evening, Gorgeous!"}</Good>
-            <span id="box b" className={childBox} ><Weather /></span>
+            <span id="box b" className={childBox} ><Weather Button={Button}/></span>
             <span id="box c" className={childBox}>
                 <p>Suggested Activity
                     <p>{suggestion.activity}</p>
