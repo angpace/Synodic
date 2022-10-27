@@ -9,6 +9,7 @@ text-align: left;
 const StyledLink = styled(Link)`
 color: palevioletred;
 text-shadow: 2px 2px #994E67;
+margin: .2em;
 text-decoration: none;
 &:hover{
     color: #ff0000;
