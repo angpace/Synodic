@@ -10,7 +10,8 @@ font-size: 60px;
 /* animation: flicker 3s linear infinite; */
 color: goldenrod;
 text-shadow:0 0 2px #FFD100,0 0 30px #FFD100,0px 0px 5px #FFD100, 0 0 150px #FFD100;color:#FFD100;
-
+:hover{
+    margin-top: 2px;}
 
 
 /* @keyframes flicker {
@@ -25,18 +26,34 @@ text-shadow:0 0 2px #FFD100,0 0 30px #FFD100,0px 0px 5px #FFD100, 0 0 150px #FFD
 } */
 `
 const StyledLink = styled(Link)`
-color: palevioletred;
+/* color: palevioletred;
 font-size: 23px;
+/*  */
 text-decoration: none;
+color: white;
 &:hover {
     transform: scale(2);
     text-decoration: underline;
 }
 `
+
+const Button = styled.button `
+border-radius:25px;
+border: none;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+font-size: 12px;
+font-weight: 500;
+padding: 7px 10px;
+background-color: cornflowerblue;
+margin: 5px;
+`
+
+
 function MainContent({ dayTime }) {
  const boxClass = dayTime ? "parent-container-light" : "parent-container-dark"
  const childBox = dayTime ? "box-light" : "box-dark"
  const [suggestion, setSuggestion] = useState([])
+
    
 
  useEffect(() => {
@@ -50,6 +67,7 @@ function MainContent({ dayTime }) {
         <div className={boxClass} >
             <Good className="box a">{dayTime ?
                 "Good Morning!" :
+
                 "Good Evening, Gorgeous!"}</Good>
             <span id="box b" className={childBox} ><Weather /></span>
             <span id="box c" className={childBox}>
@@ -58,11 +76,14 @@ function MainContent({ dayTime }) {
                     <li>Drink a glass of warm lemon water</li>
                     <li>Stretch</li>
                     <li>Read</li>
+                    <li>Apply sunscreen</li>
                 </ul>
-            <StyledLink to="/todo">To-Do</StyledLink>
+
+                <Button><StyledLink to="/todo">See to do list</StyledLink></Button>
             <p style={{color: "cornflowerblue"}}>Suggested Activity: 
                 <p>{suggestion.activity}</p>
                 </p>
+
             </span>
             <span id="box d" className={childBox}><DrinkContainer dayTime={dayTime} /></span>
             

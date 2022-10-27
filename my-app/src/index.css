@@ -31,6 +31,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; 
+  color:rgb(196, 185, 152)
   /* background-image: linear-gradient(to top, #FD8046, #191044);
   color: #999;
   height: 100%;
@@ -44,6 +45,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; 
+  color: rgb(25, 25, 112)
   /* background-color: rgb(242, 142, 226); */
   /* background-image: linear-gradient(to top, #f5c1e2,#ecbc8cad, #9ab6ee);
   color: #333;
@@ -105,7 +107,7 @@ tr:hover {
   background-image: linear-gradient(to bottom, #fcf7fa, #d0dbef); */
   background-color: transparent;
   display: grid;
-  gap: 20px;
+  gap: 32px;
   max-width: 900px;
   grid-template-areas:
   "weather greeting"
@@ -121,7 +123,7 @@ margin-top: 40px;
   box-shadow: 2px 2px #ff0000;
   border-radius: 15px; */
   background-color: transparent;
-  gap: 20px;
+  gap: 32px;
   display: grid;
   max-width: 900px;
   grid-template-areas:
@@ -135,18 +137,24 @@ margin-top: 40px;
 }
 
 .box-light{
-  border: 1px solid palevioletred;
-  background-image: linear-gradient(to bottom, #fcf7fa, #d0dbef);
-  border-radius: 3px;
+  /* border: 1px solid palevioletred; */
+  border-style: outset;
+  background-color: rgba(251, 249, 243, 0.598);
+  border-radius: 9px;
+}
+
+.box-light:hover{
+  margin-top: 2px;
 }
 
 .box-dark{
-  border: 3px solid palevioletred;
-  box-shadow: 2px 2px #ff0000;
-  background-image: linear-gradient(to bottom, #040127, #02163c);
-  border-radius: 3px; 
+  border-style: outset;
+  background-color: #2f37478a;
+  border-radius: 12px; 
 }
-
+.box-dark:hover{
+  margin-top: 2px;
+}
 /* .a{
   grid-area: greeting;
   border: 1px solid palevioletred;
@@ -155,27 +163,21 @@ margin-top: 40px;
 } */
 .a{
   grid-area: greeting;
-  border: 1px solid palevioletred;
-  background-color: transparent;
-  border-radius: 3px
 }
 #box-b {
   grid-area: weather;
-  /* border: 1px solid palevioletred;
-  background-image: linear-gradient(to bottom, #fcf7fa, #d0dbef);
-  border-radius: 3px; */
 }
 #box-c {
 grid-area: todo;
-/* border: 1px solid palevioletred;
-background-image: linear-gradient(to bottom, #fcf7fa, #d0dbef);
-  border-radius: 3px; */
+
 }
 #box-d {
   grid-area: drink;
-  /* border: 1px solid palevioletred;
-  background-image: linear-gradient(to bottom, #fcf7fa, #d0dbef);
-  border-radius: 3px; */
   }
+img{
+  border-radius: 7px;
+}
+
+ 
 
 
