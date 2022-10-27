@@ -10,9 +10,11 @@ margin-left: 1%;
 
 const StyledLink = styled(Link)`
 color: palevioletred;
-/* :hover {
-transform: scale(1.5);
-} */
+text-shadow: 2px 2px #ff0000;
+text-decoration: none;
+&:hover{
+    color: #ff0000;
+}
 `
 
 const Button = styled.button`
@@ -41,7 +43,7 @@ function Header({ dayTime, setDayTime }) {
     return (
 
             <div>
-                <Head><StyledLink to="/" style={{ textDecoration: 'none' }}>Synodic</StyledLink>
+                <Head><StyledLink to="/">Synodic</StyledLink>
                     {dayTime ?
                         <Button className="toggle" onClick={handleToggle}>🌙</Button>:
                     <Button className="toggle" onClick={handleToggle}>🌞</Button>}
