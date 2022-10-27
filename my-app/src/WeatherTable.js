@@ -1,6 +1,6 @@
 function WeatherTable({ hourly }) {
     //precipitation temperature_2m time weathercode windspeed_10m
-    const { precipitation, temperature_2m, time, weathercode, windspeed_10m } = hourly
+    const { precipitation, temperature_2m, time, weathercode, windspeed_10m, relativehumidity_2m, apparent_temperature} = hourly
 
     function renderWeather(code) {
         if (code === 0) {
@@ -116,20 +116,26 @@ function WeatherTable({ hourly }) {
                 <td>{hour.slice(11, 16)}</td>
                 <td>{renderWeather(weathercode[index])}</td>
                 <td>{parseInt(temperature_2m[index])} °F</td>
+                <td>{parseInt(apparent_temperature[index])} °F</td>
+                <td>{relativehumidity_2m[index]}%</td>
                 <td>{windspeed_10m[index].toFixed(1)} mp/h</td>
                 <td>{precipitation[index].toFixed(2)} in</td>
             </tr>
         )
     })
 
-    let currentHour = new Date().getHours()
-    let todaysDate = new Date().toJSON().slice(0, 11)
+    let date = new Date()
+    let currentHour = date.getHours()
+    let currentMin = date.getMinutes()
+    let todaysDate = date.toJSON().slice(0, 11)
+    let fullTime = currentHour + ":" + currentMin
     const currentTime = todaysDate + currentHour + ":00"
     const findIndex = time.indexOf(currentTime)
     function currentWeather(index) {
         return (
             <div className="currentWeather">
-                <h3>Time: {time[index].slice(11, 16)}</h3>
+                <h1>Current Weather</h1>
+                <h3>Time: {fullTime}</h3>
                 <h1>{renderWeather(weathercode[index])}</h1>
                 <h2>Temperature: {parseInt(temperature_2m[index])} °F</h2>
                 <h4>Wind Speed:{windspeed_10m[index].toFixed(1)} mp/h</h4>
@@ -140,7 +146,6 @@ function WeatherTable({ hourly }) {
 
     return (
         <>
-            {currentWeather(findIndex)}
             <div className="tableContainer">
                 <table className="weatherTable">
                     <thead>
@@ -148,6 +153,8 @@ function WeatherTable({ hourly }) {
                             <th>Time</th>
                             <th>Weather</th>
                             <th>Temperature</th>
+                            <th>Feels Like</th>
+                            <th>Humidity</th>
                             <th>Wind Speed</th>
                             <th>Precipitation</th>
                         </tr>
@@ -157,6 +164,7 @@ function WeatherTable({ hourly }) {
                     </tbody>
                 </table>
             </div>
+            {currentWeather(findIndex)}
         </>
     )
 }

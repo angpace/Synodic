@@ -193,9 +193,9 @@ img {
 }
 
 .tableContainer {
-  position:relative ;
+  position: relative;
   height: 350px;
-  width: 550px;
+  width: 650px;
   overflow: auto;
   top: 20px;
   overflow-y: scroll;
@@ -203,18 +203,28 @@ img {
   padding: 5px;
   text-align: justify;
 }
+
 .tableContainer::-webkit-scrollbar {
-  width:5px;
-}
-.tableContainer::-webkit-scrollbar-track {
-  -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3); 
-  border-radius:5px;
-}
-.tableContainer::-webkit-scrollbar-thumb {
-  border-radius:5px;
-  -webkit-box-shadow: inset 0 0 6px #00cccc; 
+  width: 5px;
 }
 
-.currentWeather{
-  display: block;
+.tableContainer::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.tableContainer::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px #00cccc;
+}
+
+.currentWeather {
+  position: relative;
+  width: 400px;
+  height:auto;
+  left: 700px;
+  bottom: 320px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
 }

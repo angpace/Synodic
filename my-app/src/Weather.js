@@ -24,7 +24,7 @@ function Weather() {
     //getting todays weather
     useEffect(() => {
         let date = new Date().toJSON().slice(0, 10);
-        fetch(`https://api.open-meteo.com/v1/forecast?latitude=40.71&longitude=-74.01&hourly=temperature_2m,precipitation,weathercode,windspeed_10m&daily=sunrise,sunset&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=America%2FNew_York&start_date=${date}&end_date=${date}`)
+        fetch(`https://api.open-meteo.com/v1/forecast?latitude=40.74&longitude=-73.92&hourly=temperature_2m,relativehumidity_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=sunrise,sunset&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=America%2FNew_York&start_date=${date}&end_date=${date}`)
             .then(res => res.json())
             .then(data => setTodaysWeather(data))
     }, [])
