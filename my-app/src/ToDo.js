@@ -90,9 +90,10 @@ function ToDo() {
                 <Button type="submit">Add Task</Button>
             </form>
             <table className="list">
-                <thead>To-Do List
+                <thead>
                     <tr>
                         <th>Tasks</th>
+                        <th>Edit</th>
                         <th>Completed</th>
                     </tr>
                 </thead>
@@ -100,6 +101,7 @@ function ToDo() {
                 {toDoList}
                 </tbody>
             </table>
+           
         </div>
     )
 }
