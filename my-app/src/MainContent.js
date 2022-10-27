@@ -7,23 +7,18 @@ import { useState, useEffect } from "react";
 
 const Good = styled.h2`
 font-size: 60px;
-/* animation: flicker 3s linear infinite; */
 color: goldenrod;
 text-shadow:0 0 2px #FFD100,0 0 30px #FFD100,0px 0px 5px #FFD100, 0 0 150px #FFD100;color:#FFD100;
 :hover{
     margin-top: 2px;}
-
-
-/* @keyframes flicker {
-	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-		opacity: .99;
-		text-shadow: -1px -1px 0 $outline, 1px -1px 0 $outline, -1px 1px 0 $outline, 1px 1px 0 $outline, 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
-	}
-	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-		opacity: 0.4;
-		text-shadow: none;
-	}
-} */
+`
+const Night = styled.h2`
+font-size: 60px;
+animation: flicker 2s linear infinite;
+color: goldenrod;
+text-shadow:0 0 2px #FFD100,0 0 30px #FFD100,0px 0px 5px #FFD100, 0 0 150px #FFD100;color:#FFD100;
+:hover{
+    margin-top: 2px;}
 `
 const StyledLink = styled(Link)`
 /* color: palevioletred;
@@ -73,12 +68,14 @@ function MainContent({ dayTime }) {
         <li>Set Alarm</li>
     </ul>
 
-    return (
-        <div className={boxClass} >
-            <Good className="box a">{dayTime ?
-                "Good Morning!" :
+    const morning = <Good className="box a">Good Morning!</Good> 
+    const night = <Night className="box a">Good Evening, Gorgeous!</Night>
 
-                "Good Evening, Gorgeous!"}</Good>
+    return (
+        <div className={boxClass} >{dayTime ? 
+            morning :
+            night
+        }
             <span id="box b" className={childBox} ><Weather dayTime={dayTime} Button={Button}/></span>
             <span id="box c" className={childBox}>
                 <div className="title">Suggested Activity
