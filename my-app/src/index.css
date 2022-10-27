@@ -25,19 +25,30 @@ body {
 }
 
 .App.dark {
-  background-image: linear-gradient(to top, #FD8046, #191044);
+  height: 100%;
+  background-image: url(https://cdn.pixabay.com/photo/2016/11/22/23/49/bright-1851267_1280.jpg);
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+  /* background-image: linear-gradient(to top, #FD8046, #191044);
   color: #999;
   height: 100%;
-  transition: background-image 0.25s ease-in-out;
+  transition: background-image 0.25s ease-in-out; */
 }
 
 .App.light {
-
+  height: 100%;
+  background-image: url(https://cdn.pixabay.com/photo/2018/09/10/19/08/read-3667768_1280.jpg);
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
   /* background-color: rgb(242, 142, 226); */
-  background-image: linear-gradient(to top, #f5c1e2,#ecbc8cad, #9ab6ee);
+  /* background-image: linear-gradient(to top, #f5c1e2,#ecbc8cad, #9ab6ee);
   color: #333;
   height: 100%;
-  transition: background-image 0.25s ease-in-out;
+  transition: background-image 0.25s ease-in-out; */
 
 
 }
