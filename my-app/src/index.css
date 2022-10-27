@@ -87,26 +87,55 @@ th {
 tr:hover {
    background: #f4f4f4;
  }
-.parent-container {
-  background-color: #f4f4f4;
+.parent-container-light {
+  border: 3px solid palevioletred;
+  border-radius: 15px;
+  background-image: linear-gradient(to bottom, #fcf7fa, #d0dbef);
   display: grid;
-  max-width: 600px;
+  max-width: 800px;
   grid-template-areas:
+  "greeting greeting"
   "weather weather"
-  "content content"
   "todo drink";
 grid-template-columns: 1fr 3fr;
-gap: 20px;
 text-align: center;
 margin: auto;
 }
-.a {
-  grid-area: weather;
+.parent-container-dark {
+  border: 3px solid palevioletred;
+  border-radius: 15px;
+  background-image: linear-gradient(to bottom, #100d27, #371b09);
+  display: grid;
+  max-width: 800px;
+  grid-template-areas:
+  "greeting greeting"
+  "weather weather"
+  "todo drink";
+grid-template-columns: 1fr 3fr;
+text-align: center;
+margin: auto;
+}
+
+
+.a{
+  grid-area: greeting;
+  border: 1px solid palevioletred;
+  border-radius: 3px;
 }
 .b {
-grid-area: todo;
+  grid-area: weather;
+  border: 1px solid palevioletred;
+  border-radius: 3px;
 }
 .c {
+grid-area: todo;
+border: 1px solid palevioletred;
+  border-radius: 3px;
+}
+.d {
   grid-area: drink;
+  border: 1px solid palevioletred;
+  border-radius: 3px;
   }
+
 
