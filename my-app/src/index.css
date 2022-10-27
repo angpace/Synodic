@@ -88,54 +88,83 @@ tr:hover {
    background: #f4f4f4;
  }
 .parent-container-light {
-  border: 3px solid palevioletred;
+  /* border: 3px solid palevioletred;
+  box-shadow: 2px 2px #ff0000;
   border-radius: 15px;
-  background-image: linear-gradient(to bottom, #fcf7fa, #d0dbef);
+  background-image: linear-gradient(to bottom, #fcf7fa, #d0dbef); */
+  background-color: transparent;
   display: grid;
-  max-width: 800px;
+  gap: 20px;
+  max-width: 900px;
   grid-template-areas:
-  "greeting greeting"
-  "weather weather"
+  "weather greeting"
+  "content content"
   "todo drink";
 grid-template-columns: 1fr 3fr;
 text-align: center;
 margin: auto;
+margin-top: 40px;
 }
 .parent-container-dark {
-  border: 3px solid palevioletred;
-  border-radius: 15px;
-  background-image: linear-gradient(to bottom, #100d27, #371b09);
+  /* border: 3px solid palevioletred;
+  box-shadow: 2px 2px #ff0000;
+  border-radius: 15px; */
+  background-color: transparent;
+  gap: 20px;
   display: grid;
-  max-width: 800px;
+  max-width: 900px;
   grid-template-areas:
-  "greeting greeting"
-  "weather weather"
+  "weather greeting"
+  "content content"
   "todo drink";
 grid-template-columns: 1fr 3fr;
 text-align: center;
 margin: auto;
+margin-top: 40px;
 }
 
+.box-light{
+  border: 1px solid palevioletred;
+  background-image: linear-gradient(to bottom, #fcf7fa, #d0dbef);
+  border-radius: 3px;
+}
 
+.box-dark{
+  border: 3px solid palevioletred;
+  box-shadow: 2px 2px #ff0000;
+  background-image: linear-gradient(to bottom, #040127, #02163c);
+  border-radius: 3px; 
+}
+
+/* .a{
+  grid-area: greeting;
+  border: 1px solid palevioletred;
+  background-color: transparent;
+  border-radius: 3px;
+} */
 .a{
   grid-area: greeting;
   border: 1px solid palevioletred;
-  border-radius: 3px;
+  background-color: transparent;
+  border-radius: 3px
 }
-.b {
+#box-b {
   grid-area: weather;
-  border: 1px solid palevioletred;
-  border-radius: 3px;
+  /* border: 1px solid palevioletred;
+  background-image: linear-gradient(to bottom, #fcf7fa, #d0dbef);
+  border-radius: 3px; */
 }
-.c {
+#box-c {
 grid-area: todo;
-border: 1px solid palevioletred;
-  border-radius: 3px;
+/* border: 1px solid palevioletred;
+background-image: linear-gradient(to bottom, #fcf7fa, #d0dbef);
+  border-radius: 3px; */
 }
-.d {
+#box-d {
   grid-area: drink;
-  border: 1px solid palevioletred;
-  border-radius: 3px;
+  /* border: 1px solid palevioletred;
+  background-image: linear-gradient(to bottom, #fcf7fa, #d0dbef);
+  border-radius: 3px; */
   }
 
 
