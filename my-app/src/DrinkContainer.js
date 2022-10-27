@@ -40,7 +40,7 @@ function randomCocktail(){
     // fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
     //   .then(res => res.json())
     //   .then(data => setCocktails(data.drinks))
-  }, [])
+  }, [dayTime])
 
   const renderCocktails = cocktails.map(cocktail => {
     return (
