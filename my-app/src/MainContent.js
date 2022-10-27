@@ -79,7 +79,7 @@ function MainContent({ dayTime }) {
                 "Good Morning!" :
 
                 "Good Evening, Gorgeous!"}</Good>
-            <span id="box b" className={childBox} ><Weather Button={Button}/></span>
+            <span id="box b" className={childBox} ><Weather dayTime={dayTime} Button={Button}/></span>
             <span id="box c" className={childBox}>
                 <div>Suggested Activity
                 <p>{suggestion.activity}</p>
