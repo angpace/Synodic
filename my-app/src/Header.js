@@ -4,16 +4,11 @@ import { Link } from "react-router-dom";
 const Head = styled.h1`
 font-size: 4em;
 text-align: left;
-color: palevioletred;
-margin-left: 1%;
-:hover{
-    margin-top: 2px;
-}
 `
 
 const StyledLink = styled(Link)`
 color: palevioletred;
-text-shadow: 2px 2px #ff0000;
+text-shadow: 2px 2px #994E67;
 text-decoration: none;
 &:hover{
     color: #ff0000;

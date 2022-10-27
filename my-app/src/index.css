@@ -32,10 +32,7 @@ body {
   -o-background-size: cover;
   background-size: cover; 
   color:rgb(196, 185, 152)
-  /* background-image: linear-gradient(to top, #FD8046, #191044);
-  color: #999;
-  height: 100%;
-  transition: background-image 0.25s ease-in-out; */
+
 }
 
 .App.light {
@@ -46,11 +43,7 @@ body {
   -o-background-size: cover;
   background-size: cover; 
   color: rgb(25, 25, 112)
-  /* background-color: rgb(242, 142, 226); */
-  /* background-image: linear-gradient(to top, #f5c1e2,#ecbc8cad, #9ab6ee);
-  color: #333;
-  height: 100%;
-  transition: background-image 0.25s ease-in-out; */
+
 
 
 }
@@ -90,7 +83,7 @@ table {
   margin: 25px auto;
   border-collapse: collapse;
   border: 1px solid #eee;
-  border-bottom: 2px solid #00cccc;
+  border-bottom: 2px solid cornflowerblue;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
      0px 10px 20px rgba(0,0,0,0.05),
      0px 20px 20px rgba(0,0,0,0.05),
@@ -104,7 +97,7 @@ th, td {
   border-collapse: collapse;
 }
 th {
-  background: #00cccc;
+  background: cornflowerblue;
   color: #fff;
   text-transform: uppercase;
   font-size: 12px;
@@ -113,10 +106,6 @@ tr:hover {
    background: #f4f4f4;
  }
 .parent-container-light {
-  /* border: 3px solid palevioletred;
-  box-shadow: 2px 2px #ff0000;
-  border-radius: 15px;
-  background-image: linear-gradient(to bottom, #fcf7fa, #d0dbef); */
   background-color: transparent;
   display: grid;
   gap: 32px;
@@ -131,9 +120,7 @@ margin: auto;
 margin-top: 40px;
 }
 .parent-container-dark {
-  /* border: 3px solid palevioletred;
-  box-shadow: 2px 2px #ff0000;
-  border-radius: 15px; */
+
   background-color: transparent;
   gap: 32px;
   display: grid;
@@ -149,7 +136,7 @@ margin-top: 40px;
 }
 
 .box-light{
-  /* border: 1px solid palevioletred; */
+
   border-style: outset;
   background-color: rgba(251, 249, 243, 0.598);
   border-radius: 9px;
@@ -167,12 +154,7 @@ margin-top: 40px;
 .box-dark:hover{
   margin-top: 2px;
 }
-/* .a{
-  grid-area: greeting;
-  border: 1px solid palevioletred;
-  background-color: transparent;
-  border-radius: 3px;
-} */
+
 .a{
   grid-area: greeting;
 }
