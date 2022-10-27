@@ -5,11 +5,14 @@ const DeleteButton = styled.button`
 border-radius:20px;
 border: none;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-font-size: 12px;
-font-weight: 700;
-padding: 7px 10px;
+font-size: 11px;
+font-weight: 500;
+padding: 3px 6px;
 color: white;
-background-color: white;`
+background-color: white;
+:hover {
+    background-color: lightgreen
+}`
 
 
 function Task({ task, handleEditSubmit, handleDeleteClick }) {
@@ -52,13 +55,12 @@ function Task({ task, handleEditSubmit, handleDeleteClick }) {
     }
     
     return (
-        <li>
-            
+        <tbody>
             {editClick ?
                 <>
                     <form onSubmit={onEditSubmit}>
                         <input type="text" onChange={onEditChange} value={desEdit} />
-                        <button className="textButton">Edit✏️</button>
+                        <button style={{float:"right"}}className="textButton">Edit✏️</button>
                     </form>
                 </>
                 :
@@ -67,8 +69,8 @@ function Task({ task, handleEditSubmit, handleDeleteClick }) {
                     <button className="editBtn" onClick={onEditClick}>Edit✏️</button>
                 </>
             }
-            <DeleteButton onClick={onDeleteClick}>🗑️</DeleteButton>
-        </li>
+            <DeleteButton onClick={onDeleteClick}>✔️</DeleteButton>
+            </tbody>
     )
 }
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Task from "./Task";
 import styled from "styled-components";
 
-const Button = styled.button `
+const Button = styled.button`
 border-radius:20px;
 border: none;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -20,7 +20,7 @@ function ToDo() {
         description: ""
     })
     const todoURL = "http://localhost:3000/tasks"
-    
+
     useEffect(() => {
         fetch(todoURL)
             .then(res => res.json())
@@ -76,22 +76,30 @@ function ToDo() {
         return <Task key={task.id} task={task} handleEditSubmit={handleEditSubmit} handleDeleteClick={handleDeleteClick} />
     })
 
+
     return (
-        <div style={{color: "white"}}>
+        <div style={{ color: "white" }}>
             <form onSubmit={handleSubmit}>
-                <input 
-                type="text" 
-                name="description" 
-                placeholder="Add New To Do!" 
-                onChange={handleChange} 
-                value={form.description}
+                <input
+                    type="text"
+                    name="description"
+                    placeholder="Add New To Do!"
+                    onChange={handleChange}
+                    value={form.description}
                 />
                 <Button type="submit">Add Task</Button>
             </form>
-            
-            <ul className="list">To-do List
+            <table className="list">
+                <thead>To-Do List
+                    <tr>
+                        <th>Tasks</th>
+                        <th>Completed</th>
+                    </tr>
+                </thead>
+                <tbody>
                 {toDoList}
-            </ul>
+                </tbody>
+            </table>
         </div>
     )
 }
