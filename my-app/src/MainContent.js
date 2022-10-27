@@ -14,16 +14,16 @@ function MainContent({ dayTime }) {
    
 
     return (
-        <span>
+        <div>
             <Good>{dayTime ?
                 "Hello, Good Morning!" :
                 "Hello, Good Evening!"}</Good>
-            <span className="parentBox">   
-            <span className="weatherBox"><Weather /></span>
-            <span className="taskBox"><Link to="/todo">ToDo</Link></span>
-            <span className="drinkBox"><DrinkContainer dayTime={dayTime} /></span>
+            <span className="parent-container">   
+            <span className="box a" ><Weather /></span>
+            <span className="box b"><Link to="/todo">ToDo</Link></span>
+            <span className="box c"><DrinkContainer dayTime={dayTime} /></span>
             </span> 
-        </span>
+        </div>
     )
 }
 
