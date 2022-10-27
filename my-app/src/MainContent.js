@@ -3,6 +3,7 @@ import Weather from "./Weather";
 import DrinkContainer from "./DrinkContainer";
 import styled from "styled-components";
 import { Link } from "react-router-dom"
+import { useState, useEffect } from "react";
 
 const Good = styled.h2`
 font-size: 60px;
@@ -32,28 +33,36 @@ text-decoration: none;
     text-decoration: underline;
 }
 `
-
-
-
 function MainContent({ dayTime }) {
  const boxClass = dayTime ? "parent-container-light" : "parent-container-dark"
  const childBox = dayTime ? "box-light" : "box-dark"
+ const [suggestion, setSuggestion] = useState([])
    
+
+ useEffect(() => {
+    fetch("https://www.boredapi.com/api/activity")
+      .then(res => res.json())
+      .then(data => setSuggestion(data))
+  }, [dayTime])
+  console.log(suggestion)
 
   return (
         <div className={boxClass} >
             <Good className="box a">{dayTime ?
                 "Good Morning!" :
-                "Good Evening!"}</Good>
+                "Good Evening, Gorgeous!"}</Good>
             <span id="box b" className={childBox} ><Weather /></span>
             <span id="box c" className={childBox}>
-                <ul className="list">Daily Habits:
+            <ul className="list">Daily Habits:
                     <li>Make Bed</li>
                     <li>Drink a glass of warm lemon water</li>
                     <li>Stretch</li>
                     <li>Read</li>
                 </ul>
-                <StyledLink to="/todo">See to do list</StyledLink>
+            <StyledLink to="/todo">To-Do</StyledLink>
+            <p style={{color: "cornflowerblue"}}>Suggested Activity: 
+                <p>{suggestion.activity}</p>
+                </p>
             </span>
             <span id="box d" className={childBox}><DrinkContainer dayTime={dayTime} /></span>
             
