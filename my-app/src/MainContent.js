@@ -36,7 +36,6 @@ color: white;
     text-decoration: underline;
 }
 `
-
 const Button = styled.button`
 border-radius:25px;
 border: none;
@@ -47,21 +46,16 @@ padding: 7px 10px;
 background-color: cornflowerblue;
 margin: 5px;
 `
-
-
 function MainContent({ dayTime }) {
     const boxClass = dayTime ? "parent-container-light" : "parent-container-dark"
     const childBox = dayTime ? "box-light" : "box-dark"
     const [suggestion, setSuggestion] = useState([])
-
-
 
     useEffect(() => {
         fetch("https://www.boredapi.com/api/activity")
             .then(res => res.json())
             .then(data => setSuggestion(data))
     }, [dayTime])
-    console.log(suggestion)
 
     const dailyHabbits = <ul className="list">Daily Habits
         <li>Make Bed</li>
@@ -87,14 +81,12 @@ function MainContent({ dayTime }) {
                 "Good Evening, Gorgeous!"}</Good>
             <span id="box b" className={childBox} ><Weather Button={Button}/></span>
             <span id="box c" className={childBox}>
-                <p>Suggested Activity
-                    <p>{suggestion.activity}</p>
-                </p>
-                <p> 
+                <div>Suggested Activity
+                <p>{suggestion.activity}</p>
+                </div>
                     {dayTime ?
                     dailyHabbits :
                     nightlyHabbits}
-                </p>
                 <Button><StyledLink to="/todo">See to do list</StyledLink></Button>
             </span>
             <span id="box d" className={childBox}><DrinkContainer dayTime={dayTime} /></span>
