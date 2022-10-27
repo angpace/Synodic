@@ -31,12 +31,8 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  color: rgb(196, 185, 152)
-    /* background-image: linear-gradient(to top, #FD8046, #191044);
-  color: #999;
-  height: 100%;
-  transition: background-image 0.25s ease-in-out; */
+  background-size: cover; 
+  color:rgb(196, 185, 152)
 }
 
 .App.light {
@@ -47,13 +43,6 @@ body {
   -o-background-size: cover;
   background-size: cover;
   color: rgb(25, 25, 112)
-    /* background-color: rgb(242, 142, 226); */
-    /* background-image: linear-gradient(to top, #f5c1e2,#ecbc8cad, #9ab6ee);
-  color: #333;
-  height: 100%;
-  transition: background-image 0.25s ease-in-out; */
-
-
 }
 
 .grid-container {
@@ -65,7 +54,19 @@ body {
 
 .list {
   list-style-type: none;
+  font-weight: bold;
 }
+ul li {
+  font-weight: normal;
+}
+
+.title {
+  font-weight: bold;
+}
+.title > p {
+  font-weight: normal;
+}
+
 
 .flex-container {
   display: flex;
@@ -80,12 +81,12 @@ table {
   margin: 25px auto;
   border-collapse: collapse;
   border: 1px solid #eee;
-  border-bottom: 2px solid #00cccc;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.10),
-    0px 10px 20px rgba(0, 0, 0, 0.05),
-    0px 20px 20px rgba(0, 0, 0, 0.05),
-    0px 30px 20px rgba(0, 0, 0, 0.05);
-  color: black;
+  border-bottom: 2px solid cornflowerblue;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
+     0px 10px 20px rgba(0,0,0,0.05),
+     0px 20px 20px rgba(0,0,0,0.05),
+     0px 30px 20px rgba(0,0,0,0.05);
+  color: black ;
 }
 
 th,
@@ -97,7 +98,7 @@ td {
 }
 
 th {
-  background: #00cccc;
+  background: cornflowerblue;
   color: #fff;
   text-transform: uppercase;
   font-size: 12px;
@@ -108,10 +109,6 @@ tr:hover {
 }
 
 .parent-container-light {
-  /* border: 3px solid palevioletred;
-  box-shadow: 2px 2px #ff0000;
-  border-radius: 15px;
-  background-image: linear-gradient(to bottom, #fcf7fa, #d0dbef); */
   background-color: transparent;
   display: grid;
   gap: 32px;
@@ -127,9 +124,7 @@ tr:hover {
 }
 
 .parent-container-dark {
-  /* border: 3px solid palevioletred;
-  box-shadow: 2px 2px #ff0000;
-  border-radius: 15px; */
+
   background-color: transparent;
   gap: 32px;
   display: grid;
@@ -144,8 +139,8 @@ tr:hover {
   margin-top: 40px;
 }
 
-.box-light {
-  /* border: 1px solid palevioletred; */
+
+.box-light{
   border-style: outset;
   background-color: rgba(251, 249, 243, 0.598);
   border-radius: 9px;
@@ -165,13 +160,8 @@ tr:hover {
   margin-top: 2px;
 }
 
-/* .a{
-  grid-area: greeting;
-  border: 1px solid palevioletred;
-  background-color: transparent;
-  border-radius: 3px;
-} */
-.a {
+
+.a{
   grid-area: greeting;
 }
 
