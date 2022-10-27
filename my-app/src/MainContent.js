@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 import { useState, useEffect } from "react";
 
 const Good = styled.h2`
-font-size: 50px;
+font-size: 60px;
 /* animation: flicker 3s linear infinite; */
 color: goldenrod;
 text-shadow:0 0 2px #FFD100,0 0 30px #FFD100,0px 0px 5px #FFD100, 0 0 150px #FFD100;color:#FFD100;
@@ -52,7 +52,14 @@ function MainContent({ dayTime }) {
                 "Good Morning!" :
                 "Good Evening, Gorgeous!"}</Good>
             <span id="box b" className={childBox} ><Weather /></span>
-            <span id="box c" className={childBox}><StyledLink to="/todo">To-Do</StyledLink>
+            <span id="box c" className={childBox}>
+            <ul className="list">Daily Habits:
+                    <li>Make Bed</li>
+                    <li>Drink a glass of warm lemon water</li>
+                    <li>Stretch</li>
+                    <li>Read</li>
+                </ul>
+            <StyledLink to="/todo">To-Do</StyledLink>
             <p style={{color: "cornflowerblue"}}>Suggested Activity: 
                 <p>{suggestion.activity}</p>
                 </p>
