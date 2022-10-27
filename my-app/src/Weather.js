@@ -42,7 +42,7 @@ function Weather() {
                 <div>{sunset[0].slice(11, 16)} Sunset 🌇</div>
                 <Button><Link style={{color: "white"}}to="/weather" onClick={weatherDeatsClick}>{weatherDetails ? "Less Details" : "More Details"}</Link></Button>
                 {weatherDetails?
-                    <WeatherTable hourly={todaysWeather.hourly} />
+                    <WeatherTable hourly={todaysWeather.hourly}/>
                     :
                     null
                 }

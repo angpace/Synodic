@@ -3,6 +3,7 @@
   margin: 0px;
   padding: 0px;
 }
+
 #root {
   height: 100%;
 }
@@ -27,12 +28,12 @@ body {
 .App.dark {
   height: 100%;
   background-image: url(https://cdn.pixabay.com/photo/2016/11/22/23/49/bright-1851267_1280.jpg);
-   -webkit-background-size: cover;
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; 
-  color:rgb(196, 185, 152)
-  /* background-image: linear-gradient(to top, #FD8046, #191044);
+  background-size: cover;
+  color: rgb(196, 185, 152)
+    /* background-image: linear-gradient(to top, #FD8046, #191044);
   color: #999;
   height: 100%;
   transition: background-image 0.25s ease-in-out; */
@@ -41,13 +42,13 @@ body {
 .App.light {
   height: 100%;
   background-image: url(https://cdn.pixabay.com/photo/2018/09/10/19/08/read-3667768_1280.jpg);
-   -webkit-background-size: cover;
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; 
+  background-size: cover;
   color: rgb(25, 25, 112)
-  /* background-color: rgb(242, 142, 226); */
-  /* background-image: linear-gradient(to top, #f5c1e2,#ecbc8cad, #9ab6ee);
+    /* background-color: rgb(242, 142, 226); */
+    /* background-image: linear-gradient(to top, #f5c1e2,#ecbc8cad, #9ab6ee);
   color: #333;
   height: 100%;
   transition: background-image 0.25s ease-in-out; */
@@ -74,32 +75,38 @@ body {
 }
 
 table {
+  height: 100px;
   font-family: 'Arial';
   margin: 25px auto;
   border-collapse: collapse;
   border: 1px solid #eee;
   border-bottom: 2px solid #00cccc;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
-     0px 10px 20px rgba(0,0,0,0.05),
-     0px 20px 20px rgba(0,0,0,0.05),
-     0px 30px 20px rgba(0,0,0,0.05);
-  color: black ;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.10),
+    0px 10px 20px rgba(0, 0, 0, 0.05),
+    0px 20px 20px rgba(0, 0, 0, 0.05),
+    0px 30px 20px rgba(0, 0, 0, 0.05);
+  color: black;
 }
-th, td {
+
+th,
+td {
   /* color: #999; */
   border: 1px solid #eee;
   padding: 5.5px;
   border-collapse: collapse;
 }
+
 th {
   background: #00cccc;
   color: #fff;
   text-transform: uppercase;
   font-size: 12px;
 }
+
 tr:hover {
-   background: #f4f4f4;
- }
+  background: #f4f4f4;
+}
+
 .parent-container-light {
   /* border: 3px solid palevioletred;
   box-shadow: 2px 2px #ff0000;
@@ -110,14 +117,15 @@ tr:hover {
   gap: 32px;
   max-width: 900px;
   grid-template-areas:
-  "weather greeting"
-  "content content"
-  "todo drink";
-grid-template-columns: 1fr 3fr;
-text-align: center;
-margin: auto;
-margin-top: 40px;
+    "weather greeting"
+    "content content"
+    "todo drink";
+  grid-template-columns: 1fr 3fr;
+  text-align: center;
+  margin: auto;
+  margin-top: 40px;
 }
+
 .parent-container-dark {
   /* border: 3px solid palevioletred;
   box-shadow: 2px 2px #ff0000;
@@ -127,57 +135,86 @@ margin-top: 40px;
   display: grid;
   max-width: 900px;
   grid-template-areas:
-  "weather greeting"
-  "content content"
-  "todo drink";
-grid-template-columns: 1fr 3fr;
-text-align: center;
-margin: auto;
-margin-top: 40px;
+    "weather greeting"
+    "content content"
+    "todo drink";
+  grid-template-columns: 1fr 3fr;
+  text-align: center;
+  margin: auto;
+  margin-top: 40px;
 }
 
-.box-light{
+.box-light {
   /* border: 1px solid palevioletred; */
   border-style: outset;
   background-color: rgba(251, 249, 243, 0.598);
   border-radius: 9px;
 }
 
-.box-light:hover{
+.box-light:hover {
   margin-top: 2px;
 }
 
-.box-dark{
+.box-dark {
   border-style: outset;
   background-color: #2f37478a;
-  border-radius: 12px; 
+  border-radius: 12px;
 }
-.box-dark:hover{
+
+.box-dark:hover {
   margin-top: 2px;
 }
+
 /* .a{
   grid-area: greeting;
   border: 1px solid palevioletred;
   background-color: transparent;
   border-radius: 3px;
 } */
-.a{
+.a {
   grid-area: greeting;
 }
+
 #box-b {
   grid-area: weather;
 }
+
 #box-c {
-grid-area: todo;
+  grid-area: todo;
 
 }
+
 #box-d {
   grid-area: drink;
-  }
-img{
+}
+
+img {
   border-radius: 7px;
 }
 
- 
+.tableContainer {
+  position:relative ;
+  height: 350px;
+  width: 550px;
+  overflow: auto;
+  top: 20px;
+  overflow-y: scroll;
+  margin: 10px 5px;
+  padding: 5px;
+  text-align: justify;
+}
+.tableContainer::-webkit-scrollbar {
+  width:5px;
+}
+.tableContainer::-webkit-scrollbar-track {
+  -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3); 
+  border-radius:5px;
+}
+.tableContainer::-webkit-scrollbar-thumb {
+  border-radius:5px;
+  -webkit-box-shadow: inset 0 0 6px #00cccc; 
+}
 
-
+.currentWeather{
+  display: block;
+}

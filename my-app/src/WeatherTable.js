@@ -122,21 +122,42 @@ function WeatherTable({ hourly }) {
         )
     })
 
+    let currentHour = new Date().getHours()
+    let todaysDate = new Date().toJSON().slice(0, 11)
+    const currentTime = todaysDate + currentHour + ":00"
+    const findIndex = time.indexOf(currentTime)
+    function currentWeather(index) {
+        return (
+            <div className="currentWeather">
+                <h3>Time: {time[index].slice(11, 16)}</h3>
+                <h1>{renderWeather(weathercode[index])}</h1>
+                <h2>Temperature: {parseInt(temperature_2m[index])} °F</h2>
+                <h4>Wind Speed:{windspeed_10m[index].toFixed(1)} mp/h</h4>
+                <h4>Precipitation: {precipitation[index].toFixed(2)} in</h4>
+            </div>
+        )
+    }
+
     return (
-        <table className="weatherTable">
-            <thead>
-                <tr>
-                    <th>Time</th>
-                    <th>Weather</th>
-                    <th>Temperature</th>
-                    <th>Wind Speed</th>
-                    <th>Precipitation</th>
-                </tr>
-            </thead>
-            <tbody>
-                {renderTable}
-            </tbody>
-        </table>
+        <>
+            {currentWeather(findIndex)}
+            <div className="tableContainer">
+                <table className="weatherTable">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Weather</th>
+                            <th>Temperature</th>
+                            <th>Wind Speed</th>
+                            <th>Precipitation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {renderTable}
+                    </tbody>
+                </table>
+            </div>
+        </>
     )
 }
 
