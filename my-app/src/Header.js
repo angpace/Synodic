@@ -6,6 +6,9 @@ font-size: 4em;
 text-align: left;
 color: palevioletred;
 margin-left: 1%;
+:hover{
+    margin-top: 2px;
+}
 `
 
 const StyledLink = styled(Link)`
