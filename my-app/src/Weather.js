@@ -1,6 +1,17 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
 import WeatherTable from "./WeatherTable";
+import styled from "styled-components";
+
+const Button = styled.button `
+border-radius:25px;
+border: none;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+font-size: 12px;
+font-weight: 500;
+padding: 7px 10px;
+background-color: cornflowerblue;
+`
 
 function Weather() {
     const [todaysWeather, setTodaysWeather] = useState({})
@@ -25,11 +36,11 @@ function Weather() {
         const avgTemp = (temperature_2m.reduce((a, b) => a + b, 0) / temperature_2m.length).toFixed(2)
     
         return (
-            <div className="weather_preview">
+            <div >
                 <div>Todays Avg Temp: {avgTemp} °F</div>
                 <div>{sunrise[0].slice(11, 16)} Sunrise 🌅</div>
                 <div>{sunset[0].slice(11, 16)} Sunset 🌇</div>
-                <button><Link to="/weather" onClick={weatherDeatsClick}>{weatherDetails ? "Less Details" : "More Details"}</Link></button>
+                <Button><Link style={{color: "white"}}to="/weather" onClick={weatherDeatsClick}>{weatherDetails ? "Less Details" : "More Details"}</Link></Button>
                 {weatherDetails?
                     <WeatherTable hourly={todaysWeather.hourly} />
                     :
