@@ -9,7 +9,8 @@ font-size: 60px;
 /* animation: flicker 3s linear infinite; */
 color: goldenrod;
 text-shadow:0 0 2px #FFD100,0 0 30px #FFD100,0px 0px 5px #FFD100, 0 0 150px #FFD100;color:#FFD100;
-
+:hover{
+    margin-top: 2px;}
 
 
 /* @keyframes flicker {
@@ -42,12 +43,14 @@ font-size: 12px;
 font-weight: 500;
 padding: 7px 10px;
 background-color: cornflowerblue;
+margin: 5px;
 `
 
 
 function MainContent({ dayTime }) {
  const boxClass = dayTime ? "parent-container-light" : "parent-container-dark"
  const childBox = dayTime ? "box-light" : "box-dark"
+ 
    
 
   return (
@@ -57,7 +60,7 @@ function MainContent({ dayTime }) {
                 "Good Evening!"}</Good>
             <span id="box b" className={childBox} ><Weather/></span>
             <span id="box c" className={childBox}>
-                <ul className="list">Daily Habits:
+               <ul className="list">Daily Habits:
                     <li>Make Bed</li>
                     <li>Drink a glass of warm lemon water</li>
                     <li>Stretch</li>
