@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Link } from "react-router-dom";
 
 const Head = styled.h1`
-font-size: 4em;
+font-size: 5em;
 text-align: left;
 `
 
@@ -21,7 +21,7 @@ text-decoration: none;
 const Button = styled.button`
 display: inline-block;
 color: palevioletred;
-font-size: .8em;
+font-size: .5em;
 margin: .35em;
 padding: 0.25em;
 border: 0px solid palevioletred;
