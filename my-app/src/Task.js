@@ -14,6 +14,20 @@ background-color: white;
     background-color: lightgreen
 }`
 
+const EditButton = styled.button`
+border-radius:20px;
+border: none;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+font-size: 11px;
+font-weight: 500;
+padding: 3px 6px;
+color: cornflowerblue;
+background-color: white;
+:hover {
+    background-color: lightgreen
+}
+`
+
 
 function Task({ task, handleEditSubmit, handleDeleteClick }) {
     const { description, id } = task
@@ -55,22 +69,25 @@ function Task({ task, handleEditSubmit, handleDeleteClick }) {
     }
     
     return (
-        <tbody>
+        <tr>
+            <td>{description}</td>
+            <td>
             {editClick ?
-                <>
+                
                     <form onSubmit={onEditSubmit}>
                         <input type="text" onChange={onEditChange} value={desEdit} />
-                        <button style={{float:"right"}}className="textButton">Edit✏️</button>
+                        <EditButton className="textButton">✏️</EditButton>
                     </form>
-                </>
                 :
-                <>
-                    {description}  
-                    <button className="editBtn" onClick={onEditClick}>Edit✏️</button>
-                </>
+                  
+                    <EditButton className="editBtn" onClick={onEditClick}>Edit</EditButton>
+                
             }
+            </td>
+            <td>
             <DeleteButton onClick={onDeleteClick}>✔️</DeleteButton>
-            </tbody>
+            </td>
+            </tr>
     )
 }
 
