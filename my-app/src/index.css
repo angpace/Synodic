@@ -189,6 +189,7 @@ img {
   position: relative;
   height: 350px;
   width: 650px;
+  left: 150px;
   overflow: auto;
   top: 20px;
   overflow-y: scroll;
@@ -215,7 +216,7 @@ img {
   position: relative;
   width: 400px;
   height:auto;
-  left: 700px;
+  left: 820px;
   bottom: 320px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
