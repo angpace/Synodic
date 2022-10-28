@@ -32,9 +32,6 @@ text-shadow:0 0 2px #FFD100,0 0 30px #FFD100,0px 0px 5px #FFD100, 0 0 150px #FFD
 }
 `
 const StyledLink = styled(Link)`
-/* color: palevioletred;
-font-size: 23px;
-/*  */
 text-decoration: none;
 color: white;
 &:hover {
@@ -46,11 +43,11 @@ const Button = styled.button`
 border-radius:25px;
 border: none;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-font-size: 12px;
+font-size: 13px;
 font-weight: 500;
 padding: 7px 10px;
 background-color: cornflowerblue;
-margin: 5px;
+margin: 11px;
 `
 function MainContent({ dayTime }) {
     const boxClass = dayTime ? "parent-container-light" : "parent-container-dark"
@@ -79,8 +76,7 @@ function MainContent({ dayTime }) {
         <li>Set Alarm</li>
     </ul>
 
-    // const morning = <Good className="box a">Good Morning!</Good> 
-    // const night = <Night className="box a">Good Evening, Gorgeous!</Night>
+
 
     return (
         <div className={boxClass}>{dayTime ? 

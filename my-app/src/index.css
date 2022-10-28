@@ -55,6 +55,7 @@ body {
 .list {
   list-style-type: none;
   font-weight: bold;
+  margin-bottom: 3px;;
 }
 ul li {
   font-weight: normal;
@@ -62,6 +63,8 @@ ul li {
 
 .title {
   font-weight: bold;
+  margin-top: 9px;
+  margin-bottom: 20px;;
 }
 .title > p {
   font-weight: normal;
