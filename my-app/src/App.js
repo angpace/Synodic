@@ -34,7 +34,7 @@ function App() {
               <ToDo />
             </Route>
             <Route path="/weather">
-              <Weather />
+              <Weather dayTime={dayTime}/>
             </Route>
             <Route path="/">
               <MainContent dayTime={dayTime} />

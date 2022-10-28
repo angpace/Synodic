@@ -1,4 +1,4 @@
-function WeatherTable({ hourly }) {
+function WeatherTable({ hourly, dayTime}) {
     //precipitation temperature_2m time weathercode windspeed_10m
     const { precipitation, temperature_2m, time, weathercode, windspeed_10m, relativehumidity_2m, apparent_temperature} = hourly
 
@@ -112,7 +112,8 @@ function WeatherTable({ hourly }) {
 
     const renderTable = time.map((hour, index) => {
         return (
-            <tr key={hour}>
+           
+            <tr style={dayTime ? {color: "black"} : {background: "white", opacity: .70}} key={hour}>
                 <td>{hour.slice(11, 16)}</td>
                 <td>{renderWeather(weathercode[index])}</td>
                 <td>{parseInt(temperature_2m[index])} °F</td>
@@ -138,6 +139,8 @@ function WeatherTable({ hourly }) {
                 <h3>Time: {fullTime}</h3>
                 <h1>{renderWeather(weathercode[index])}</h1>
                 <h2>Temperature: {parseInt(temperature_2m[index])} °F</h2>
+                <h2>Feels Like: {parseInt(apparent_temperature[index])} °F</h2>
+                <h4>Humidity: {relativehumidity_2m[index]}%</h4>
                 <h4>Wind Speed:{windspeed_10m[index].toFixed(1)} mp/h</h4>
                 <h4>Precipitation: {precipitation[index].toFixed(2)} in</h4>
             </div>

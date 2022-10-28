@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import WeatherTable from "./WeatherTable";
 import styled from "styled-components";
 
@@ -45,17 +45,24 @@ function Weather({dayTime}) {
     
         return (
             <div >
-                <div>Average Temp: {avgTemp} °F</div>
-                {dayTime ? viewSunrise
-                :
-                viewSunset
-                }
-                <Button><StyledLink to="/weather" onClick={weatherDeatsClick}>{weatherDetails ? "Less Details" : "More Details"}</StyledLink></Button>
-                {weatherDetails?
-                    <WeatherTable hourly={todaysWeather.hourly}/>
-                    :
-                    null
-                }
+                <Route exact path="/">
+                    <div>Avverage Temp: {avgTemp} F</div>
+                    <div>{viewSunrise}</div>
+                    <div>{viewSunset}</div>
+                    <Button>
+                        <StyledLink to="/weather/details">
+                            See Weather
+                        </StyledLink>
+                    </Button>
+                </Route>
+                <Route path="/weather/details">
+                    <Button>
+                        <StyledLink to="/">
+                            Return
+                        </StyledLink>
+                    </Button>
+                    <WeatherTable dayTime={dayTime} hourly={todaysWeather.hourly} />
+                </Route>    
             </div>
         )
     }
