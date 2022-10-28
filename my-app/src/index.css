@@ -114,7 +114,7 @@ tr:hover {
 .parent-container-light {
   background-color: transparent;
   display: grid;
-  gap: 32px;
+  gap: 27px;
   max-width: 900px;
   grid-template-areas:
     "weather greeting"
@@ -123,13 +123,13 @@ tr:hover {
   grid-template-columns: 1fr 3fr;
   text-align: center;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 37px;
 }
 
 .parent-container-dark {
 
   background-color: transparent;
-  gap: 32px;
+  gap: 27px;
   display: grid;
   max-width: 900px;
   grid-template-areas:
@@ -139,7 +139,7 @@ tr:hover {
   grid-template-columns: 1fr 3fr;
   text-align: center;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 37px;
 }
 
 
@@ -224,4 +224,8 @@ img {
 
 .prev {
   margin-top: 9px;
+}
+
+.coffee{
+  margin: 9px;
 }
