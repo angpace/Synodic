@@ -44,7 +44,7 @@ function randomCocktail(){
 
   const renderCocktails = cocktails.map(cocktail => {
     return (
-      <div key={cocktail.idDrink}>
+      <div classname="cocktail" key={cocktail.idDrink}>
         <img
           src={cocktail.strDrinkThumb} alt={cocktail.strDrink}
           style={{ width: "300px" }}
