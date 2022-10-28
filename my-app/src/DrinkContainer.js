@@ -24,7 +24,7 @@ function DrinkContainer({ dayTime }) {
     .map((coffee) => {
       if (coffee.id === random)
         return <div key={coffee.id}>
-          <img style={{ width: "300px" }} src={coffee.image} alt={coffee.title}></img>
+          <img style={{ width: "42%", height: "42%" }} src={coffee.image} alt={coffee.title}></img>
           <h2>{coffee.title}</h2>
           <small>{coffee.description}</small>
         </div>
