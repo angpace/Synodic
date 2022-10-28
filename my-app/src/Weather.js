@@ -11,6 +11,7 @@ font-size: 12px;
 font-weight: 500;
 padding: 7px 10px;
 background-color: cornflowerblue;
+margin: 9px;
 `
 const StyledLink = styled(Link)`
 color: white;
@@ -46,7 +47,7 @@ function Weather({dayTime}) {
         return (
             <div >
                 <Route exact path="/">
-                    <div>Avverage Temp: {avgTemp} F</div>
+                    <div className="prev">Average Temp: {avgTemp} F</div>
                     <div>{viewSunrise}</div>
                     <div>{viewSunset}</div>
                     <Button>
