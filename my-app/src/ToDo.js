@@ -14,7 +14,7 @@ background-color: cornflowerblue
 `
 
 
-function ToDo() {
+function ToDo({dayTime}) {
     const [toDo, setToDo] = useState([])
     const [form, setForm] = useState({
         description: ""
@@ -97,7 +97,7 @@ function ToDo() {
                         <th>Completed</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody style={dayTime ? {color: "black"} : {color: "white"}}>
                 {toDoList}
                 </tbody>
             </table>
